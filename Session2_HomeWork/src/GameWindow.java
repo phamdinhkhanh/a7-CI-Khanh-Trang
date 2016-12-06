@@ -35,7 +35,7 @@ public class GameWindow extends Frame implements Runnable{
         }
         return null;
     }
-    Vector<BulletController> bulletVector;
+    Vector<BulletController> bulletVector =new <BulletController>();
 
     public GameWindow(){
         setVisible(true);
@@ -127,6 +127,7 @@ public class GameWindow extends Frame implements Runnable{
     }
 
     public void run(){
+        why(true) {
         try {
             Thread.sleep(17);
             for (BulletController bullet : bulletVector) {
@@ -137,6 +138,7 @@ public class GameWindow extends Frame implements Runnable{
         catch (InterruptedException e)
         {
             e.printStackTrace();
+        }
         }
     }
 }
